@@ -840,8 +840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d879e7848e540a74a9e628f09dcea966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  players: {fileID: 2134210918}
+  moveSpeed: 3.5
 --- !u!50 &2134210918
 Rigidbody2D:
   serializedVersion: 4
@@ -876,6 +875,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0850946, y: -1.6779215}
+  m_Offset: {x: 0, y: -1.6779215}
   m_Size: {x: 1.1214482, y: 0.37988192}
   m_Direction: 1

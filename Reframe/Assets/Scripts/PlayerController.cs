@@ -6,9 +6,17 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
 
-    public Rigidbody2D players;
+    private Rigidbody2D rb;
+    private SpriteRenderer spriteRend;
+    private Vector2 movement;
 
-    Vector2 movement;
+    private bool facingLeft = false;
+
+    private void Start()
+    {
+        rb = GetComponentInChildren<Rigidbody2D>();
+        spriteRend = GetComponentInChildren<SpriteRenderer>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -19,6 +27,16 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        players.MovePosition(players.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if(facingLeft && movement.x > 0)
+        {
+            spriteRend.flipX = !spriteRend.flipX;
+            facingLeft = false;
+        }
+        if (!facingLeft && movement.x < 0)
+        {
+            spriteRend.flipX = !spriteRend.flipX;
+            facingLeft = true;
+        }
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
