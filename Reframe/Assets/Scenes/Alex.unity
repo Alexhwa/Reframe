@@ -854,9 +854,10 @@ GameObject:
   - component: {fileID: 2134210917}
   - component: {fileID: 2134210918}
   - component: {fileID: 2134210919}
+  - component: {fileID: 2134210920}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -975,3 +976,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -1.6779215}
   m_Size: {x: 1.1214482, y: 0.37988192}
   m_Direction: 1
+--- !u!114 &2134210920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134210914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a2ee40a13cb234c91cd8692c23bf64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 803823450}
+  FadeOutSeconds: 1
+  FadeInSeconds: 1
+  RayRadius: 3.09
+  FinalAlpha: 0.038
+  LayerMask:
+    serializedVersion: 2
+    m_Bits: 3
