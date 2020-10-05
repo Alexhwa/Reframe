@@ -46,5 +46,9 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene("Good_Ending");
         }
+        if (other.tag == "BadEnd")
+        {
+            SceneManager.LoadScene("Bad_Ending");
+        }
     }
 }
