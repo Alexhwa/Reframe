@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interable_objects : MonoBehaviour
+public class Final_Decision : MonoBehaviour
 {
     // Start is called before the first frame update
     public static bool GameDecision = false;
     public static bool FinalDecision = false;
     public GameObject decisionMenuUI;
+    void Start()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("h"))
+        if (Input.GetKeyDown("j"))
         {
             if (GameDecision)
             {
@@ -35,14 +40,14 @@ public class Interable_objects : MonoBehaviour
         Time.timeScale = 0f;
         GameDecision = true;
     }
-    public void Decide()
+    public void Final()
     {
-        GameDecision = false;
+        FinalDecision = false;
         Debug.Log("Bad");
     }
-    public void Decide2()
+    public void Final2()
     {
-        GameDecision = true;
+        FinalDecision = true;
         Debug.Log("Good");
     }
 }

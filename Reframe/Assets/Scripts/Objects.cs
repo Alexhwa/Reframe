@@ -7,6 +7,7 @@ public class Objects : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject firstText;
+    public GameObject SecondText;
     void Start()
     {
         
@@ -18,6 +19,10 @@ public class Objects : MonoBehaviour
         if (Input.GetKey("h"))
         {
             Destroy(firstText);
+        }
+        if (Input.GetKey("j"))
+        {
+            Destroy(SecondText);
         }
     }
 }
