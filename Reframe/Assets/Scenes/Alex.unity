@@ -1308,7 +1308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7be5014aba2c4f35bfabf91e7001779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstText: {fileID: 0}
+  firstText: {fileID: 516820729}
 --- !u!70 &1745925328
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1766,7 +1766,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 4}
+  m_Size: {x: 1.7777778, y: 3.5555556}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
