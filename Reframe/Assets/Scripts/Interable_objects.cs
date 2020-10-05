@@ -22,7 +22,7 @@ public class Interable_objects : MonoBehaviour
             }
         }
     }
-    void Resume()
+    public void Resume()
     {
         decisionMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -33,5 +33,15 @@ public class Interable_objects : MonoBehaviour
         decisionMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameDecision = true;
+    }
+    public void Decide()
+    {
+        GameDecision = false;
+        Debug.Log("Bad");
+    }
+    public void Decide2()
+    {
+        GameDecision = true;
+        Debug.Log("Good");
     }
 }
