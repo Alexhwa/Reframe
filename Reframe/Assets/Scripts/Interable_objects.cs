@@ -10,7 +10,7 @@ public class Interable_objects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("h"))
+        if (Input.GetKeyDown("h"))
         {
             if (GameDecision)
             {
