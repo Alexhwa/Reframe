@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Final_Decision : MonoBehaviour
 {
@@ -49,5 +50,12 @@ public class Final_Decision : MonoBehaviour
     {
         FinalDecision = true;
         Debug.Log("Good");
+    }
+    public void End()
+    {
+        if (FinalDecision)
+        {
+            SceneManager.LoadScene("Good_Ending");
+        }
     }
 }
