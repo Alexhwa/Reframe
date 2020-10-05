@@ -5,24 +5,33 @@ using UnityEngine;
 public class Interable_objects : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform Spawnpoint;
-    public GameObject Prefab;
-    void Start()
-    {
-        
-    }
-
+    public static bool GameDecision = false;
+    public GameObject decisionMenuUI;
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
+        if (Input.GetKey("h"))
         {
-            Instantiate(Prefab, Spawnpoint.position, Spawnpoint.rotation);
-            Debug.Log("Spawning");
+            if (GameDecision)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
         }
+    }
+    void Resume()
+    {
+        decisionMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameDecision = false;
+    }
+    void Pause()
+    {
+        decisionMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameDecision = true;
     }
 }
