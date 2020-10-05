@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRend;
     private Animator anim;
     private Vector2 movement;
+    AudioSource audioSrc;
 
     private bool facingLeft = false;
 
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponentInChildren<Rigidbody2D>();
         spriteRend = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
+        audioSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,10 +31,13 @@ public class PlayerController : MonoBehaviour
         if(movement != Vector2.zero)
         {
             anim.SetBool("Walking", true);
+            audioSrc.UnPause ();
+            
         }
         else
         {
             anim.SetBool("Walking", false);
+            audioSrc.Pause ();
         }
     }
 
