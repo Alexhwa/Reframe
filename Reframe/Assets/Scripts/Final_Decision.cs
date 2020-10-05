@@ -61,7 +61,7 @@ public class Final_Decision : MonoBehaviour
         }
         if (FinalDecision = false)
         {
-            Instantiate(bed, new Vector2(0, 0), Quaternion.identity);
+            Instantiate(bed, new Vector2(2, 1), Quaternion.identity);
         }
     }
 }

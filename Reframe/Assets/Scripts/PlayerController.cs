@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -38,5 +39,12 @@ public class PlayerController : MonoBehaviour
             facingLeft = true;
         }
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "GoodEnd")
+        {
+            SceneManager.LoadScene("Good_Ending");
+        }
     }
 }
