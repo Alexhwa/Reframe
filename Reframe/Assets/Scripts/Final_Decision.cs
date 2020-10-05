@@ -57,11 +57,11 @@ public class Final_Decision : MonoBehaviour
     {
         if (FinalDecision)
         {
-            Instantiate(doors, new Vector2(0, 0), Quaternion.identity);
+            SceneManager.LoadScene("Good_Ending");
         }
-        if (FinalDecision = false)
+        else
         {
-            Instantiate(bed, new Vector2(2, 1), Quaternion.identity);
+            SceneManager.LoadScene("Bad_Ending");
         }
     }
 }
