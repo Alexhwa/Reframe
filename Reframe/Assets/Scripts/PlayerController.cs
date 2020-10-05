@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
-
+    public AudioClip walking;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRend;
     private Animator anim;
