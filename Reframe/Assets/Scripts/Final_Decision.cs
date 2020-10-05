@@ -9,6 +9,8 @@ public class Final_Decision : MonoBehaviour
     public static bool GameDecision = false;
     public static bool FinalDecision = false;
     public GameObject decisionMenuUI;
+    public GameObject doors;
+    public GameObject bed;
     void Start()
     {
         
@@ -55,7 +57,11 @@ public class Final_Decision : MonoBehaviour
     {
         if (FinalDecision)
         {
-            SceneManager.LoadScene("Good_Ending");
+            Instantiate(doors, new Vector2(0, 0), Quaternion.identity);
+        }
+        if (FinalDecision = false)
+        {
+            Instantiate(bed, new Vector2(0, 0), Quaternion.identity);
         }
     }
 }
