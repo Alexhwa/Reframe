@@ -855,6 +855,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &869243023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 522718701, guid: efca5e142d2676647a1139cbf3b26e4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1290553739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &954157681
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   decisionMenuUI: {fileID: 67940744}
+  doors: {fileID: 869243023}
 --- !u!1 &970734659
 GameObject:
   m_ObjectHideFlags: 0
